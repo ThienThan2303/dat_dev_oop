@@ -18,7 +18,7 @@ class PhanSo
         int UCLN(int a, int b);
         void Rutgon();
 };
-
+ 
 //2. Khai báo hàm Nhập
 void PhanSo::Nhap()
 {
@@ -75,7 +75,7 @@ PhanSo PhanSo::Thuong(PhanSo&ps2)
 }
 
 //8. Khai báo hàm tính ước chung lớn nhất
-int UCLN(int a, int b)
+int PhanSo::UCLN(int a, int b)
 {
     while(b!=0)
     {
@@ -87,7 +87,7 @@ int UCLN(int a, int b)
 }
 
 //9. Khai báo hàm Rút gọn Phân Số
-void Rutgon(int &tuso, int &mauso)
+void PhanSo::Rutgon()
 {
     int ucln = UCLN(tuso, mauso);
     tuso = tuso / ucln;
@@ -98,9 +98,9 @@ void Rutgon(int &tuso, int &mauso)
 int main()
 {
     PhanSo ps1, ps2, kq;
-    cout << "Nhập phân số thứ nhất: ";
+    cout << "Nhập phân số thứ nhất: " << endl;
     ps1.Nhap();
-    cout << "Nhập phân số thứ hai: ";
+    cout << "Nhập phân số thứ hai: " << endl;
     ps2.Nhap();
 
     kq = ps1.Tong(ps2);
